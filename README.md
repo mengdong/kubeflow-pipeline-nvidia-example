@@ -14,4 +14,4 @@ Upload the tar.gz file in kubeflow_tf folder, things should work as it is.
 
 5, run python script in kubeflow-tf to get tar.gz file and upload to kubeflow cluster.
 
-As a result of my sloppiness to maintain this code, user has to keep track of NGC tensorflow/trtis server/trtis client version when using updated NGC containers. The version need to be compatible as TRTIS server only accept certain tensorrt version. Also use has to manually build TRTIS client following TRTIS documentation.
+As a result of my sloppiness to maintain this code, user has to keep track of NGC tensorflow/trtis server/trtis client version when using updated NGC containers. The version need to be compatible as TRTIS server only accept certain tensorrt version. The rule of thumb is that NGC TF and TRITON/TRTIS should have the same version, for example 19.12
