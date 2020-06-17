@@ -1,0 +1,28 @@
+name: "resnet_graphdef"
+platform: "tensorflow_graphdef"
+max_batch_size: 128
+
+input [
+  {
+    name: "input_tensor"
+    data_type: TYPE_FP32
+    format: FORMAT_NHWC
+    dims: [ 32, 32, 3 ]
+  }
+]
+
+output [
+  {
+    name: "resnet50_v1.5/output/softmax"
+    data_type: TYPE_FP32
+    dims: [ 10 ]
+    label_filename: "labels.txt"
+  }
+]
+
+instance_group [
+  {
+    kind: KIND_GPU,
+    count: 4
+  }
+]

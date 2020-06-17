@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-rw-pv
+  namespace: kubeflow
+spec:
+  storageClassName: standard
+  capacity:
+    storage: 40Gi
+  accessModes:
+    - ReadWriteOnce
+  gcePersistentDisk:
+    pdName: dongm-kubeflow
+    fsType: ext4

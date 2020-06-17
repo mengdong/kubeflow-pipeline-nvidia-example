@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-rw-pvc
+  namespace: kubeflow
+spec:
+  storageClassName: standard
+  volumeName: my-rw-pv
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 30Gi
